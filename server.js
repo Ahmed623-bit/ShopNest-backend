@@ -7,9 +7,9 @@ const userRoutes = require('./routes/userRouter');
 const app = express();
 connectDB();
 
-// ✅ تفعيل CORS – السماح بالطلبات من أكثر من origin
+// ✅ تفعيل CORS – السماح بالطلبات من أي origin
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://shop-nest-frontend-7ikwlgdw4-ahmed623-bits-projects.vercel.app'],
+    origin: '*',  // السماح بأي origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true // إذا كنت تستخدم الكوكيز أو توكنات مصادقة
 }));
